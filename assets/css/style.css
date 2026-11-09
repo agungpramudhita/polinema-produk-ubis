@@ -74,3 +74,42 @@ footer a{color:#fff}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}.growth .bar{transform:none}.growth .line{stroke-dashoffset:0}.growth .dot{opacity:1}}
 header.nav nav{display:flex;align-items:center}header.nav .btn:after{display:none}
 .growth{max-width:620px;margin-left:auto;margin-right:auto}
+
+/* ===== Motion: versi ramai ===== */
+.hero{background:linear-gradient(120deg,#dff0ff,#fff6d6,#e3f0ff,#dff0ff);background-size:300% 300%;animation:bg 12s ease infinite}
+@keyframes bg{50%{background-position:100% 50%}}
+.coin:nth-child(n+5){animation-duration:7s}
+.coin:nth-child(5){top:35%;left:2%;animation-delay:-3s}.coin:nth-child(6){top:80%;left:20%;width:24px;height:24px;animation-delay:-5s}.coin:nth-child(7){top:25%;right:2%;width:22px;height:22px;animation-delay:-2.5s}.coin:nth-child(8){top:75%;right:30%;animation-delay:-6s}
+.fi{position:absolute;font-size:2rem;animation:drift 8s ease-in-out infinite;filter:drop-shadow(0 4px 6px rgba(11,42,111,.2));z-index:0}
+.fi.f1{top:18%;left:42%}.fi.f2{top:70%;left:8%;animation-delay:-2s}.fi.f3{top:12%;right:30%;animation-delay:-4s}.fi.f4{bottom:12%;right:12%;animation-delay:-6s}
+@keyframes drift{0%,100%{transform:translate(0,0) rotate(-8deg)}33%{transform:translate(14px,-16px) rotate(8deg)}66%{transform:translate(-10px,-6px) rotate(-4deg)}}
+.hero h1{background:linear-gradient(90deg,var(--navy),var(--blue),#f0a500,var(--navy));background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmer 6s linear infinite}
+@keyframes shimmer{to{background-position:250% 0}}
+.logo{animation:pop 1.2s cubic-bezier(.2,1.4,.4,1) both,wob 4s ease-in-out 1.2s infinite}
+@keyframes pop{from{transform:scale(.3) rotate(-12deg);opacity:0}}@keyframes wob{50%{transform:rotate(-2deg) scale(1.03)}}
+.chip{animation:chipin .6s both}.chip:nth-child(2){animation-delay:.15s}.chip:nth-child(3){animation-delay:.3s}
+@keyframes chipin{from{opacity:0;transform:translateY(14px) scale(.8)}}
+.marquee{background:var(--navy);color:var(--yellow);overflow:hidden;white-space:nowrap;padding:12px 0;font-weight:800;letter-spacing:.08em}
+.marquee div{display:inline-block;animation:slide 22s linear infinite}.marquee span{margin:0 22px}
+@keyframes slide{to{transform:translateX(-50%)}}
+.stat{animation:none}.stat.in{animation:statpop .7s cubic-bezier(.2,1.5,.4,1) both}
+@keyframes statpop{from{transform:scale(.6) rotate(-6deg)}}
+.step.in:before{animation:ping 2.4s ease-out infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(255,201,40,.7)}80%,100%{box-shadow:0 0 0 14px rgba(255,201,40,0)}}
+.step:nth-child(2).in:before{animation-delay:.3s}.step:nth-child(3).in:before{animation-delay:.6s}.step:nth-child(4).in:before{animation-delay:.9s}
+.growth.in .bar{animation:breathe 3s ease-in-out 2s infinite}
+.growth.in .bar:nth-of-type(2){animation-delay:2.3s}.growth.in .bar:nth-of-type(3){animation-delay:2.6s}
+@keyframes breathe{50%{transform:scaleY(.93)}}
+.card .ic{display:inline-block;transition:transform .3s}.card:hover .ic{animation:jig .6s}
+@keyframes jig{25%{transform:rotate(-18deg) scale(1.3)}75%{transform:rotate(18deg) scale(1.3)}}
+.gallery img{transition:transform .4s,box-shadow .4s}.gallery img:hover{transform:scale(1.06) rotate(-1.5deg);box-shadow:0 14px 28px rgba(0,0,0,.25);z-index:2;position:relative}
+.price .num{display:inline-block}.price .card:hover .num{animation:jig .6s}
+.btn[data-wa]{animation:wiggle 4s ease-in-out infinite}
+@keyframes wiggle{0%,86%,100%{transform:none}90%{transform:rotate(-3deg) scale(1.06)}94%{transform:rotate(3deg) scale(1.06)}}
+.wa-fab{position:fixed;right:16px;bottom:16px;z-index:20;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;color:#fff;font-size:1.8rem;text-decoration:none;box-shadow:0 6px 16px rgba(0,0,0,.3);animation:fab 2s infinite}
+@keyframes fab{0%{box-shadow:0 0 0 0 rgba(37,211,102,.7),0 6px 16px rgba(0,0,0,.3)}70%,100%{box-shadow:0 0 0 20px rgba(37,211,102,0),0 6px 16px rgba(0,0,0,.3)}}
+.piece{position:fixed;pointer-events:none;z-index:50;font-size:1.4rem;will-change:transform}
+.tilt{transform-style:preserve-3d;will-change:transform}
+@media(prefers-reduced-motion:reduce){.fi,.marquee div{animation:none!important}.piece{display:none}}
+html,body{overflow-x:clip}
+@media(max-width:600px){header.nav .link{display:none}header.nav .btn{margin-left:0!important}.brand{font-size:.9rem}}
