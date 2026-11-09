@@ -42,3 +42,4 @@ footer{background:#061a47;color:#c9d6f0;padding:28px 0;font-size:.9rem;text-alig
 footer a{color:#fff}
 .note{color:var(--muted);font-size:.9rem;text-align:center;margin-top:14px}
 @media(min-width:720px){.hero .grid{grid-template-columns:1.1fr .9fr}.cards.c4{grid-template-columns:repeat(4,1fr)}.cards.c2{grid-template-columns:1fr 1fr}.cards.c3{grid-template-columns:repeat(3,1fr)}.steps{grid-template-columns:repeat(4,1fr)}.step{flex-direction:column}.two{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:repeat(4,1fr)}.team{grid-template-columns:repeat(3,1fr)}}
+.brand{display:flex;align-items:center;gap:10px}.brand img{height:36px;width:auto}.flogo{height:48px;width:auto;margin:0 auto 10px}
