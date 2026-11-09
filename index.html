@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="id"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Produk Unit Bisnis Polinema</title>
+<meta name="description" content="Katalog produk Unit Bisnis Politeknik Negeri Malang.">
+<link rel="stylesheet" href="assets/css/style.css"></head><body>
+<header class="nav"><div class="wrap"><a class="brand" href="./">Polinema · Unit Bisnis</a><a class="btn" data-wa href="#">WhatsApp</a></div></header>
+<section class="hero"><div class="wrap"><h1>Produk Unit Bisnis Polinema</h1><p class="lead">Karya inovasi Politeknik Negeri Malang untuk pendidikan dan kewirausahaan.</p></div></section>
+<section><div class="wrap"><h2>Katalog Produk</h2><div id="list" class="cards c3"></div></div></section>
+<footer><div class="wrap">© Unit Bisnis Polinema · <a href="https://merch.polinema.ac.id">merch.polinema.ac.id</a> · @merchpolinema.id</div></footer>
+<script src="assets/js/wa.js"></script>
+<script>
+fetch("data/products.json").then(r=>r.json()).then(d=>{
+  document.getElementById("list").innerHTML=d.products.map(p=>`
+  <a class="card" href="${p.url}" style="text-decoration:none">
+    <img src="${p.image}" alt="${p.name}" style="border-radius:12px;margin-bottom:12px">
+    <h3>${p.name}</h3><p>${p.description}</p><b style="color:var(--blue)">${p.price}</b></a>`).join("");
+});
+</script></body></html>

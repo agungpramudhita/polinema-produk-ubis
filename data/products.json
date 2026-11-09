@@ -1,0 +1,20 @@
+{
+  "unit": {
+    "name": "Unit Bisnis Polinema",
+    "whatsapp": "628133800082",
+    "whatsappDisplay": "+62 813-3800-082",
+    "website": "https://merch.polinema.ac.id",
+    "instagram": "@merchpolinema.id"
+  },
+  "products": [
+    {
+      "slug": "do-it-start-a-business",
+      "name": "DO IT: Start A Business",
+      "tagline": "Belajar Bermain Berwirausaha",
+      "description": "Paket board game edukasi + pelatihan kewirausahaan 2 jam, terintegrasi aplikasi pengukur kompetensi.",
+      "image": "assets/img/hero-paket.jpg",
+      "price": "Mulai Rp250.000/orang",
+      "url": "products/do-it-start-a-business/"
+    }
+  ]
+}
