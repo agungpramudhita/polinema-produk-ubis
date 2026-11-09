@@ -113,3 +113,14 @@ header.nav nav{display:flex;align-items:center}header.nav .btn:after{display:non
 @media(prefers-reduced-motion:reduce){.fi,.marquee div{animation:none!important}.piece{display:none}}
 html,body{overflow-x:clip}
 @media(max-width:600px){header.nav .link{display:none}header.nav .btn{margin-left:0!important}.brand{font-size:.9rem}}
+
+/* ===== Lightbox ===== */
+.gallery img{cursor:zoom-in}
+.lb{position:fixed;inset:0;z-index:100;background:rgba(6,26,71,.92);display:none;align-items:center;justify-content:center;padding:16px;opacity:0;transition:opacity .25s}
+.lb.open{display:flex}.lb.show{opacity:1}
+.lb img{max-width:100%;max-height:86vh;border-radius:14px;box-shadow:0 20px 60px rgba(0,0,0,.5);transform:scale(.88);transition:transform .3s cubic-bezier(.2,1.2,.4,1);cursor:default}
+.lb.show img{transform:scale(1)}
+.lb button{position:absolute;border:0;background:rgba(255,255,255,.15);color:#fff;width:46px;height:46px;border-radius:50%;font-size:1.5rem;cursor:pointer;backdrop-filter:blur(6px)}
+.lb button:hover{background:var(--yellow);color:var(--navy)}
+.lb .x{top:14px;right:14px}.lb .p{left:12px;top:50%;margin-top:-23px}.lb .n{right:12px;top:50%;margin-top:-23px}
+.lb .c{position:absolute;bottom:14px;left:0;right:0;text-align:center;color:#fff;font-size:.9rem}
