@@ -125,3 +125,4 @@ html,body{overflow-x:clip}
 .lb .x{top:14px;right:14px}.lb .p{left:12px;top:50%;margin-top:-23px}.lb .n{right:12px;top:50%;margin-top:-23px}
 .lb .c{position:absolute;bottom:14px;left:0;right:0;text-align:center;color:#fff;font-size:.9rem}
 @media(min-width:720px){.gallery{grid-template-columns:repeat(3,1fr)}}.gallery img{object-position:center 40%}
+.team .ketua{grid-column:1/-1;background:var(--navy);color:#fff;border-color:var(--navy)}.team .ketua b{color:var(--yellow);font-size:1.15rem}.team .ketua small{color:#c9d6f0}@media(min-width:720px){.team{grid-template-columns:repeat(3,1fr)}}
